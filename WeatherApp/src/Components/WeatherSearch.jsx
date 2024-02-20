@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import TextField from "@mui/material/TextField";
 import { Button, Stack } from "@mui/material";
+import PropTypes from "prop-types";
 
-const WeatherSerch = ({ updateInfo }) => {
+const WeatherSearch = ({ updateInfo }) => {
+  console.log(typeof updateInfo);
   let [city, setCity] = useState("");
   let [err, setErr] = useState(false);
 
@@ -64,7 +66,7 @@ const WeatherSerch = ({ updateInfo }) => {
             onChange={handleChange}
           />
           <Button variant="contained" type="submit" color="success">
-            Serch
+            Search
           </Button>
         </Stack>
         {err && <p style={{ color: "red" }}>New Such Place</p>}
@@ -73,4 +75,7 @@ const WeatherSerch = ({ updateInfo }) => {
   );
 };
 
-export default WeatherSerch;
+WeatherSearch.propTypes = {
+updateInfo: PropTypes.func.isRequired,
+};
+export default WeatherSearch;

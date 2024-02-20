@@ -1,4 +1,3 @@
-import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -6,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import ThunderstormIcon from "@mui/icons-material/Thunderstorm";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
+import PropTypes from "prop-types";
 
 const WeatherInfo = ({ weatherInfo }) => {
   const imageUrl =
@@ -58,6 +58,10 @@ const WeatherInfo = ({ weatherInfo }) => {
       </Card>
     </div>
   );
+};
+
+WeatherInfo.propTypes = {
+  weatherInfo: PropTypes.object.isRequired,
 };
 
 export default WeatherInfo;

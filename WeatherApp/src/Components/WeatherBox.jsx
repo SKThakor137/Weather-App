@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import WeatherSerch from "./WeatherSerch";
+import { useState } from "react";
+import WeatherSearch from "./WeatherSearch";
 import WeatherInfo from "./WeatherInfo";
 
 const WeatherBox = () => {
@@ -32,7 +32,7 @@ const WeatherBox = () => {
           borderRadius: "4px",
         }}
       >
-        <WeatherSerch updateInfo={updateInfo} />
+        <WeatherSearch updateInfo={updateInfo} />
         <WeatherInfo weatherInfo={weatherInfo} />
       </div>
     </div>
